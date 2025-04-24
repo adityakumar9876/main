@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builderz - Construction Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-yellow: #FFB800;
+            --primary-navy: #000f2c;
+        }
+        
+        .top-bar {
+            background-color: var(--primary-yellow);
+            padding: 8px 0;
+        }
+        
+        .navbar {
+            background-color: var(--primary-navy);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-yellow) !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 10px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 15, 44, 0.7), rgba(0, 15, 44, 0.7)),
+                        url('https://images.unsplash.com/photo-1612833943307-4b3b3b3b3b3b');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .feature-box {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .feature-box.yellow {
+            background-color: var(--primary-yellow);
+        }
+        
+        .feature-box.navy {
+            background-color: var(--primary-navy);
+            color: white;
+        }
+        
+        .btn-quote {
+            background-color: var(--primary-yellow);
+            color: var(--primary-navy);
+            font-weight: bold;
+            padding: 10px 25px;
+            border: none;
+        }
+        
+        .top-bar-icon {
+            color: var(--primary-navy);
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-clock top-bar-icon"></i>
+                        <span>Opening Hour: Mon - Fri, 8:00 - 9:00</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-telephone top-bar-icon"></i>
+                        <span>Call Us: +012 345 6789</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-envelope top-bar-icon"></i>
+                        <span>Email Us: info@example.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Builderz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PROJECT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-quote ms-3" href="#">Get A Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h3 class="mb-4">We Are Professional</h3>
+            <h1 class="display-3 mb-4">For Your Dream Project</h1>
+            <button class="btn btn-quote btn-lg">GET A QUOTE</button>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-4">
+                <div class="feature-box navy">
+                    <i class="bi bi-person-gear fs-1 mb-3"></i>
+                    <h4>Expert Worker</h4>
+                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature-box yellow">
+                    <i class="bi bi-buildings fs-1 mb-3"></i>
+                    <h4>Quality Work</h4>
+                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature-box navy">
+                    <i class="bi bi-headset fs-1 mb-3"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
