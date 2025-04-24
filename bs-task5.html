@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .invalid-feedback {
+            display: none; 
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="myForm">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+            <div class="invalid-feedback" id="firstNameError">Please supply your first name</div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+            <div class="invalid-feedback" id="lastNameError">Please supply your last name</div>
+        </div>
+        <div class="form-group">
+            <label for="email">E-Mail</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" class="form-control" id="email" placeholder="E-Mail Address">
+            </div>
+            <div class="invalid-feedback" id="emailError">Please supply your email address</div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone #</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="tel" class="form-control" id="phone" placeholder="(845)555-1212">
+            </div>
+            <div class="invalid-feedback" id="phoneError">Please supply your phone number</div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-home"></i></span>
+                </div>
+                <input type="text" class="form-control" id="address" placeholder="Address">
+            </div>
+            <div class="invalid-feedback" id="addressError">Please supply your street address</div>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <input type="text" class="form-control" id="city" placeholder="City">
+            </div>
+            <div class="invalid-feedback" id="cityError">Please supply your city</div>
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <select class="form-control" id="state">
+                <option value="">Please select your state</option>
+                <option value="CA">California</option>
+                <option value="NY">New York</option>
+                <!-- Add more states as needed -->
+            </select>
+            <div class="invalid-feedback" id="stateError">Please select your state</div>
+        </div>
+        <div class="form-group">
+            <label>Do you have hosting?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes">
+                <label class="form-check-label" for="hostingYes">Yes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no">
+                <label class="form-check-label" for="hostingNo">No</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="projectDescription">Project Description</label>
+            <textarea class="form-control" id="projectDescription" rows="3" placeholder="Project Description"></textarea>
+            <div class="invalid-feedback" id="projectDescriptionError">Please provide a project description</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#myForm').on('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            
+            if ($('#firstName').val().trim() === '') {
+                $('#firstNameError').show();
+                isValid = false;
+            } else {
+                $('#firstNameError').hide();
+            }
+
+            
+            if ($('#lastName').val().trim() === '') {
+                $('#lastNameError').show();
+                isValid = false;
+            } else {
+                $('#lastNameError').hide();
+            }
+
+            
+            if ($('#email').val().trim() === '') {
+                $('#emailError').show();
+                isValid = false;
+            } else {
+                $('#emailError').hide();
+            }
+
+            
+            if ($('#phone').val().trim() === '') {
+                $('#phoneError').show();
+                isValid = false;
+            } else {
+                $('#phoneError').hide();
+            }
+
+            
+            if ($('#address').val().trim() === '') {
+                $('#addressError').show();
+                isValid = false;
+            } else {
+                $('#addressError').hide();
+            }
+
+            
+            if ($('#city').val().trim() === '') {
+                $('#cityError').show();
+                isValid = false;
+            } else {
+                $('#cityError').hide();
+            }
+
+            
+            if ($('#state').val().trim() === '') {
+                $('#stateError').show();
+                isValid = false;
+            } else {
+                $('#stateError').hide();
+            }
+
+            
+            if ($('#projectDescription').val().trim() === '') {
+                $('#projectDescriptionError').show();
+                isValid = false;
+            } else {
+                $('#projectDescriptionError').hide();
+            }
+
+            if (isValid) {
+                alert('Form submitted successfully!');
+                
+            }
+        });
+    });
+</script>
+</body>
+</html>
