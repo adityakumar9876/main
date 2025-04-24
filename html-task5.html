@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form>
+        <table align="center" border="1">
+            <tr>
+                <th>First Name:</th>
+                <td><input type="text" name="firstName" required></td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td><input type="text" name="lastName" required></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <th>Re-enter Password:</th>
+                <td><input type="password" name="rePassword" required></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="male" required> Male
+                    <input type="radio" name="gender" value="female" required> Female
+                    <input type="radio" name="gender" value="other" required> Other
+                </td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td><input type="number" name="age" required></td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td><input type="tel" name="phone" required></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <th>State:</th>
+                <td><input type="text" name="state" required></td>
+            </tr>
+            <tr>
+                <th>Country:</th>
+                <td>
+                    <select name="country" required>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Languages Known:</th>
+                <td>
+                    <input type="checkbox" name="languages" value="english"> English
+                    <input type="checkbox" name="languages" value="spanish"> Spanish
+                    <input type="checkbox" name="languages" value="french"> French
+                    <input type="checkbox" name="languages" value="german"> German
+                    <input type="checkbox" name="languages" value="chinese"> Chinese
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Login to the <a href="www.vatsal.com">vatsal</a> website</a>
+                </td>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+<style>
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+</style>
+</html>
