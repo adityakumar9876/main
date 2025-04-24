@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Webpage</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 1em;
+        }
+        main {
+            flex: 1;
+            padding: 1em;
+        }
+        nav a {
+            display: block;
+            color: #333;
+            padding: 0.5em 0;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="#">Home Page</a>
+            <a href="#">Musings</a>
+            <a href="#">Home Town</a>
+            <a href="#">Links</a>
+        </nav>
+        <main>
+            <h2>My first Styled Page</h2>
+            <p>Weolcome</p>
+        </main>
+    </div>
+    <footer>
+        <p>Made by Parth
+
+        </p>
+    </footer>
+</body>
+</html>
